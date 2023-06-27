@@ -18,20 +18,20 @@ The app should an IQ test you can do online.
 - Leaderboard
 - Login
 - Adaptive Testing
-- responsive designe
+- Responsive design
 - Feedback at the end of the test
 
-## target
+## Target
 
-- age: 16-22 years
-- group: young adults
+- Age: 16-22 years
+- Group: young adults
 
-## division
+## Division
 
  name | due | P/I
  ------|-----|------
  website(Html/css)|04.07.23| I
- Journal | evry day| I
- Papierflyer | 04.07.23| P
- js code| 04.07.23| P
+ Journal | every day| I
+ Paperflyer | 04.07.23| P
+ JS code| 04.07.23| P
  Database | 04.07.23| P
