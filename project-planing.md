@@ -33,5 +33,5 @@ The app should an IQ test you can do online.
  website(Html/css)|04.07.23| I
  Journal | every day| I
  Paperflyer | 04.07.23| P
- JS code| 04.07.23| P
+ JS code| 04.07.23| P/I
  Database | 04.07.23| P
