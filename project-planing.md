@@ -1,19 +1,19 @@
-# Planing
+# Planning
 
 ## Goal
 
-the app is about a IQ test u can do online and get your iq after.
+The app should an IQ test you can do online.
 
-- visual apieling
-- IQ test intresting to solve
-- not to time consuming
-- inututiv
-- acurad
+- Visually appealing
+- IQ test should be interesting to solve
+- Not too time consuming
+- Intuitive
+- Accurate Scoring
 
 ## ideas
 
 - Pattern Recognition
 - Use of AI
 - Website
-- leaderboard
+- Leaderboard
 - Login
