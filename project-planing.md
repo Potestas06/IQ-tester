@@ -10,10 +10,13 @@ The app should an IQ test you can do online.
 - Intuitive
 - Accurate Scoring
 
-## ideas
+## Ideas
 
 - Pattern Recognition
 - Use of AI
 - Website
 - Leaderboard
 - Login
+- Adaptive Testing
+- responsive designe
+- Feedback at the end of the test
