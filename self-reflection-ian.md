@@ -2,7 +2,7 @@
 
 There are things I like:
 
-- We used modern technology
+- We used modern technology (AI)
 - Our ideas went smoothly
 - The UI is easy to work with
 
