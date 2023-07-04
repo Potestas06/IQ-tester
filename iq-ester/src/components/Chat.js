@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const CatGPTChatbot = () => {
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
+  const messagesContainerRef = useRef(null);
 
   const startChat = async () => {
     try {
@@ -45,6 +46,14 @@ const CatGPTChatbot = () => {
   useEffect(() => {
     startChat();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [chatHistory]);
+
+  const scrollToBottom = () => {
+    messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+  };
 
   const handleUserInput = (event) => {
     setUserInput(event.target.value);
@@ -95,28 +104,46 @@ const CatGPTChatbot = () => {
     }
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleSendMessage();
+    }
+  };
+
   return (
-    <div className="Container">
-      <div>
+    <div className="container" style={{ paddingBottom: "80px" }}>
+      <div
+        className="messages-container"
+        ref={messagesContainerRef}
+        style={{ maxHeight: "calc(100vh - 200px)", overflowY: "auto" }}
+      >
         {chatHistory.map((chat, index) => (
           <div
             key={index}
-            style={{
-              textAlign: chat.isUser ? "right" : "left",
-              color: chat.isUser ? "blue" : "green",
-              fontWeight: "bold",
-              fontSize: "20px",
-              padding: "10px",
-              margin: "10px",
-            }}
+            className={`py-2 ${
+              chat.isUser ? "text-right text-primary" : "text-left text-success"
+            }`}
           >
             <p>{chat.message}</p>
           </div>
         ))}
       </div>
-      <div>
-        <input type="text" value={userInput} onChange={handleUserInput} />
-        <button onClick={handleSendMessage}>Send</button>
+      <div className="fixed-bottom d-flex align-items-center">
+        <input
+          type="text"
+          value={userInput}
+          onChange={handleUserInput}
+          onKeyPress={handleKeyPress}
+          className="form-control mr-2"
+          style={{ marginRight: "10px" }}
+        />
+        <button
+          onClick={handleSendMessage}
+          className="btn btn-primary"
+          style={{ marginRight: "10px" }}
+        >
+          Send
+        </button>
       </div>
     </div>
   );
