@@ -15,10 +15,9 @@ The app should an IQ test you can do online.
 - Pattern Recognition
 - Use of AI
 - Website
-- Leaderboard
 - Login
 - Adaptive Testing
-- responsive designe
+- responsive design
 - Feedback at the end of the test
 
 ## target
@@ -31,7 +30,7 @@ The app should an IQ test you can do online.
  name | due | P/I
  ------|-----|------
  website(Html/css)|04.07.23| I
- Journal | evry day| I
+ Journal | every day| I
  Papierflyer | 04.07.23| P
  js code| 04.07.23| P
  Database | 04.07.23| P
