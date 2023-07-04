@@ -14,3 +14,4 @@ So basically we planned the project from the Ground.
 - The plans were done so we needed to start making the program.
 - Since we wanted to simplify our own work we decided to have AI help us out so we added ChatGPT.
 - The Integration was mainly made Patrick and Ian mainly worked on the UI
+- At last we reflected what we think was good and what bad

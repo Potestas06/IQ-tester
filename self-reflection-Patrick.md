@@ -1,12 +1,12 @@
-# Self reflection
+# Self reflection Patrick
 
-In my opinion there were things we could have done better:
+What I liked:
+
+- I learned new things
+- The ideas where briliant
+- The website looks good
+
+What we should improve on:
 
 - Better distributing of work
 - Increase accuracy of the test
-
-What was Good
-
-- coud learn cool new things
-- The ideas where briliant
-- The website looks god

@@ -1,12 +1,12 @@
-# Self reflection
+# Self reflection Ian
 
-There are things I like:
+What I liked:
 
-- We used modern technology
+- We used modern technology (AI)
 - Our ideas went smoothly
 - The UI is easy to work with
 
-There were two things we could have done better:
+What we should improve on:
 
 - Better distributing of work
 - Increase accuracy of the test
