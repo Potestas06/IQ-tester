@@ -1,4 +1,4 @@
-# Self reflection
+# Self reflection Patrick
 
 In my opinion there were things we could have done better:
 
@@ -7,6 +7,6 @@ In my opinion there were things we could have done better:
 
 What was Good
 
-- coud learn cool new things
+- I learned new things
 - The ideas where briliant
-- The website looks god
+- The website looks good
