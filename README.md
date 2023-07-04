@@ -1,2 +1,2 @@
 # IQ-tester
-A project for school just ignore it pls
+School project to inaccurately test your IQ
