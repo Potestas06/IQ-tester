@@ -4,45 +4,45 @@ const CatGPTChatbot = () => {
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
 
+  const startChat = async () => {
+    try {
+      // Send initial system message to the CatGPT API
+      const response = await fetch(
+        "https://api.openai.com/v1/chat/completions",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
+          },
+          body: JSON.stringify({
+            model: "gpt-3.5-turbo",
+            messages: [
+              {
+                role: "system",
+                content:
+                  "You are a psychiatrist called JOE and your mission is to find the IQ of the user it does not have to be accurate in any kind it just has to be a number between 0 and 20. Don't ask more than 10 questions and don't ask more than 1 question at a time after the user answered the 10 Questions you have to give a Random Number between 50 and 130.",
+              },
+            ],
+          }),
+        }
+      );
+
+      const data = await response.json();
+      console.log(data);
+      // Add the initial system response to the chat history
+      const systemResponse = data.choices[0].message.content;
+      const updatedChatHistory = [
+        ...chatHistory,
+        { message: systemResponse, isUser: false },
+      ];
+      setChatHistory(updatedChatHistory);
+    } catch (error) {
+      console.log("Error:", error);
+    }
+  };
+
   useEffect(() => {
-    const startChat = async () => {
-      try {
-        // Send initial system message to the CatGPT API
-        const response = await fetch(
-          "https://api.openai.com/v1/chat/completions",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer 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`,
-            },
-            body: JSON.stringify({
-              model: "gpt-3.5-turbo",
-              messages: [
-                {
-                  role: "system",
-                  content:
-                    "You are a psychiatrist called JOE and your mission is to find the IQ of the user it does not have to be accurate in any kind it just has to be a number between 0 and 20. Don't ask more than 10 questions and don't ask more than 1 question at a time after the user anserd the 10 Questions you have to give a Random Number between 50 and 130.",
-                },
-              ],
-            }),
-          }
-        );
-
-        const data = await response.json();
-        console.log(data);
-        // Add the initial system response to the chat history
-        const systemResponse = data.choices[0].message.content;
-        const updatedChatHistory = [
-          ...chatHistory,
-          { message: systemResponse, isUser: false },
-        ];
-        setChatHistory(updatedChatHistory);
-      } catch (error) {
-        console.log("Error:", error);
-      }
-    };
-
     startChat();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -69,7 +69,7 @@ const CatGPTChatbot = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer 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`,
+            Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
           },
           body: JSON.stringify({
             model: "gpt-3.5-turbo",

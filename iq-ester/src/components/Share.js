@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 const SaveUserInfo = () => {
   const [username, setUsername] = useState('');
   const [iq, setIQ] = useState('');
+  const [isDisplayed, setIsDisplayed] = useState(false); // State variable to control display
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -18,12 +19,7 @@ const SaveUserInfo = () => {
     try {
       // Initialize Firebase
       const firebaseConfig = {
-        apiKey: "AIzaSyDb5U8TWTsK1Ha5bafSuZiCxv_j2sNrqKY",
-        authDomain: "iq-tester-bbw.firebaseapp.com",
-        projectId: "iq-tester-bbw",
-        storageBucket: "iq-tester-bbw.appspot.com",
-        messagingSenderId: "1019768050414",
-        appId: "1:1019768050414:web:eb35fd538035b6362719ff"
+        // Firebase configuration...
       };
 
       firebase.initializeApp(firebaseConfig);
@@ -42,6 +38,14 @@ const SaveUserInfo = () => {
       console.log('Error saving user info:', error);
     }
   };
+
+  const handleButtonClick = () => {
+    setIsDisplayed(true); // Set the state variable to true when button is clicked
+  };
+
+  if (!isDisplayed) {
+    return <button onClick={handleButtonClick}>save IQ</button>;
+  }
 
   return (
     <div>
