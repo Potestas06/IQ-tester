@@ -15,6 +15,7 @@ add an .env file
     REACT_APP_API_KEY={your openai API key}
 ```
 
+start the programm
 ```
     npm start
 ```
